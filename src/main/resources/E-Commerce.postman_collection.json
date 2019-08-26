@@ -1,0 +1,891 @@
+{
+  "info": {
+    "_postman_id": "d489b6aa-18c5-4d95-83bb-59a0551aab78",
+    "name": "E-Commerce",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cart",
+      "item": [
+        {
+          "name": "Add",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Cart1\"\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/cart",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":1\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/cart",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/cart/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find By Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/cart/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find All",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/cart",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Product To Cart",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"title\":\"Elma\",\n\t\"category\": {\n\t\t\"id\": 1\n\t} \n}"
+            },
+            "url": {
+              "raw": "localhost:8080/cart/add/3/2/10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart",
+                "add",
+                "3",
+                "2",
+                "10"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Apply Coupon",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/cart/applyCoupon/3/4",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart",
+                "applyCoupon",
+                "3",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ApplyCampaign",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n    {\n        \"id\": 16\n    },\n    {\n        \"id\": 17\n    }\n]"
+            },
+            "url": {
+              "raw": "localhost:8080/cart/applyDiscounts/3",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart",
+                "applyDiscounts",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getTotalAmountAfterDiscounts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/cart/getTotalAmountAfterDiscounts/3",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart",
+                "getTotalAmountAfterDiscounts",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getDeliveryDiscount",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/cart/getDeliveryDiscount/3",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart",
+                "getDeliveryDiscount",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "print",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/cart/print/3",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cart",
+                "print",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Campaign",
+      "item": [
+        {
+          "name": "Add",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"category\": {\n        \"id\": 1\n    },\n    \"value\": 12.5,\n    \"count\": 2,\n    \"type\": \"AMOUNT\"\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/campaign",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "campaign"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":1\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/campaign",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "campaign"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/campaign/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "campaign",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find By Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/campaign/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "campaign",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find All",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/campaign",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "campaign"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Category",
+      "item": [
+        {
+          "name": "Add",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Meyve\"\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/category",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "category"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": 1,\n    \"title\": \"Sebze\"\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/category",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "category"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/category/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "category",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find By Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/category/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "category",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find All",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/category",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "category"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Coupon",
+      "item": [
+        {
+          "name": "Add",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"minLimit\": 10,\n    \"discount\": 10,\n    \"type\": \"RATE\"\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/coupon",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "coupon"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":1\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/coupon",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "coupon"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/coupon/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "coupon",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find By Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/coupon/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "coupon",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find All",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/coupon",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "coupon"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "Add",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Elma\",\n    \"price\": 6.99,\n    \"category\": {\n        \"id\": 1\n    }\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/product",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "product"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":1\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/product",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "product"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/product/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "product",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find By Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/product/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "product",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find All",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/product",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "product"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Demo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/demo/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "demo",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Demo Prepare",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/prepare",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prepare"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
